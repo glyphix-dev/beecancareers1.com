@@ -1,0 +1,13 @@
+{{ $address := printf "%s %s %s %s %s" .address1 .address2 .city .state .zipCode }}
+<div class="goolge-map">
+  <div class="responsive-iframe">
+    <iframe 
+    class="lazy"
+    width="600" 
+    height="450" 
+    frameborder="0" 
+    style="border:0" 
+    data-src={{ printf "https://www.google.com/maps/embed/v1/place?%s" (querify "q" $address "key" (getenv "GOOGLE_KEY"))}} 
+    allowfullscreen></iframe>
+  </div>
+</div>

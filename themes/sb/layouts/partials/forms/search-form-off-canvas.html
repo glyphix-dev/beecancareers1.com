@@ -1,0 +1,16 @@
+{{ $seq := seq 1000 }}
+{{ $id :=  index (shuffle $seq) 0 }}
+<form tabindex="0"  role="search" class="search-form" action="/search">
+  <div>
+    <label class="sr-only" for="search-query-offcanvas-{{ $id }}">
+      Search this site
+    </label>
+    <input
+      aria-label="Search this site" 
+      type="text" 
+      class="form-control form-control-sm" 
+      id="search-query-offcanvas-{{ $id }}" 
+      name="q" placeholder="Search {{ .Site.Title | title }}" tabindex="0">
+    <button name="search" type="submit" class="btn btn-sm btn-dark" tabindex="0">Search</button>
+  </div>
+</form>

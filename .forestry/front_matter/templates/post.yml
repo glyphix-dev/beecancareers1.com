@@ -1,0 +1,26 @@
+---
+label: Post
+hide_body: false
+fields:
+- name: page_meta
+  type: include
+  config: {}
+  template: page-meta
+  label: Page Meta
+- name: url_mangement
+  type: include
+  config: {}
+  template: permalinks
+  label: URL Mangement
+- name: layout
+  type: text
+  config:
+    required: false
+  label: Layout
+  default: post
+  hidden: true
+- name: pageOptions
+  type: include
+  config: {}
+  template: page-options
+  label: Post Options

@@ -1,0 +1,8 @@
+{{ with .Site.Taxonomies.tags }}
+  <h3>Tags</h3>
+  <ul class="unstyled-list">
+    {{ range . }}
+            <li><a href="{{ .Page.Permalink | absURL }}" >{{ .Page.Title | title }} ({{ .Count }})</a></li>
+    {{ end }}
+  </ul>  
+{{ end }}
