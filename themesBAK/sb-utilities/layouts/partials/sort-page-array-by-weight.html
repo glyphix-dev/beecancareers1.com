@@ -1,7 +1,0 @@
-{{ $scratch := newScratch }}
-{{ $pages := slice }}
-{{ $context := .context }}
-{{ range .paths }}
-  {{$pages = $pages | append  ($context.GetPage .) }}
-{{ end }}
-{{ return $pages }}

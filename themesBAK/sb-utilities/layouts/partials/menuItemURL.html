@@ -1,7 +1,0 @@
-{{- $url := slice -}}
-{{- if and .Params.includeChildrenInMenu (gt (len .Pages) 0)  -}}
-  {{- $url = $url | append "#" -}}
-{{- else -}}
-  {{- $url = $url | append .Permalink -}}
-{{- end -}}
-{{- index $url 0 -}}

@@ -4,20 +4,27 @@
   
     
       <url>
-        <loc>/</loc>
+        <loc>//localhost:8888/</loc>
         <lastmod>2020-05-01T08:02:55-07:00</lastmod>
       </url>
     
   
     
       <url>
-        <loc>/categories/</loc>
+        <loc>//localhost:8888/terms-of-use/</loc>
+        <lastmod>2020-11-10T20:04:32+00:00</lastmod>
       </url>
     
   
     
       <url>
-        <loc>/tags/</loc>
+        <loc>//localhost:8888/categories/</loc>
+      </url>
+    
+  
+    
+      <url>
+        <loc>//localhost:8888/tags/</loc>
       </url>
     
   

@@ -2,10 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on Bugo</title>
-    <link>/</link>
+    <link>//localhost:8888/</link>
     <description>Recent content in Home on Bugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 01 May 2020 08:02:55 -0700</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 May 2020 08:02:55 -0700</lastBuildDate><atom:link href="//localhost:8888/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Terms of Use</title>
+      <link>//localhost:8888/terms-of-use/</link>
+      <pubDate>Tue, 10 Nov 2020 20:04:32 +0000</pubDate>
+      
+      <guid>//localhost:8888/terms-of-use/</guid>
+      <description>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris.</description>
+    </item>
+    
   </channel>
 </rss>

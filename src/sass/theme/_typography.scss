@@ -17,22 +17,15 @@ h1,h2,h3,h4,h5,h6,
   color: config.$heading-color;
   font-weight: config.$heading-font-weight;
   text-transform: config.$heading-text-transform;
-  margin-bottom: config.$heading-margin-bottom;
 
   small {
-    padding-top: var(--space--4);
     display: block;
-    font-size: 75%;
-    font-weight: lighter;
+    font-size: 85%;
   }
 }
 
 p,ul,ol {
   padding: config.$typographic-padding;
-}
-
-ul,ol {
-  padding: config.$typographic-list-padding;
 }
 
   blockquote {
