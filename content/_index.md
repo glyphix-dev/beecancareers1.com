@@ -33,13 +33,9 @@ contentBlocks:
     columns:
     - template: text-column
       content: |-
-        The Beecan Health Network is seeking full-time CNAs to join our team of healthcare professionals. We are looking for compassionate individuals who are eager to provide outstanding care while growing with a group of supportive team members.
+        Care for our patients as well as our team members is a core value at Beecan and it's why we offer competitive compensation, benefit packages including 401k, continuing education and the opportunity for bonuses every month.
 
-        Our network offers competitive compensation, benefit packages including 401k, and the opportunity for bonuses each month.
-
-        <span class="button-link">[Apply Now!](https://beecanhealth.candidatecare.jobs/job_positions/browse_all)</span>
-
-        <small class="legal">*$1,250 hiring bonus is valid only through June 30, 2021. Terms and conditions apply.</small>
+        **Sound interesting?** [**APPLY NOW**](https://beecanhealth.candidatecare.jobs/job_positions/browse_all)
     - template: text-column
       content: "![](https://res.cloudinary.com/beecan-health/image/upload/v1618507718/Beecan-Nurse_FNL-2_ny6ubs.jpg)"
     showTitle: false
