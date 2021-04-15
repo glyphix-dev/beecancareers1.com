@@ -8,11 +8,12 @@ description: This is a temporary description of the home page
 images: []
 hero:
   useDefaultImage: false
-  heroImage: https://res.cloudinary.com/beecan-health/image/upload/v1618507771/shutterstock_317578751_ac2920.jpg
-  heroCaption: ''
+  heroImage: https://res.cloudinary.com/beecan-health/image/upload/v1615405928/HomeHero1.jpg
+  heroCaption: That’s our CNA Hiring Bonus to all new Beecan CNAs. And that is just
+    the beginning!
   heroImageAltText: ''
   displayPageTitle: false
-  heroCustomText: "# $1,250* CNA HIRING BONUS!"
+  heroCustomText: "# It pays to care... $1,250* to be exact."
 pageOptions:
   showSidebar: false
   hideMarketingBlock: false
