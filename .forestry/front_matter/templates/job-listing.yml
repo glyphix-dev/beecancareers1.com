@@ -1,0 +1,51 @@
+---
+label: Job Listing
+hide_body: false
+fields:
+- name: page_meta
+  type: include
+  config: {}
+  template: page-meta
+  label: Page Meta
+- name: validThrough
+  type: datetime
+  label: Valid Through
+- name: employmentType
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - FULL_TIME
+    - PART_TIME
+    - CONTRACTOR
+    - TEMPORARY
+    - INTERN
+    - VOLUNTEER
+    - PER_DIEM
+    - OTHER
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Job Type
+- name: url_mangement
+  type: include
+  config: {}
+  template: permalinks
+  label: URL Mangement
+  hidden: true
+- name: pageOptions
+  type: include
+  config: {}
+  template: page-options
+  label: Post Options
+  hidden: true
+- name: layout
+  type: text
+  config:
+    required: false
+  label: Layout
+  default: job-listing
+  hidden: true

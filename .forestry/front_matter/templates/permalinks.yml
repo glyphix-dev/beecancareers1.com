@@ -27,12 +27,23 @@ fields:
     max: 
     source:
       type: documents
-      section: categories
-      file: data/categories.yaml
+      section: taxonomies
+      file: data/taxonomies.yaml
       path: categories
   label: Categories
-- name: tags
+- name: staff
   type: tag_list
   default: []
-  label: Tags
-  description: Add more specific taxonomy to the page.
+  label: Staff
+- name: areas
+  type: list
+  config:
+    use_select: true
+    min: 
+    max: 
+    source:
+      type: documents
+      section: taxonomies
+      file: data/taxonomies.yaml
+      path: practiceAreas
+  label: Areas

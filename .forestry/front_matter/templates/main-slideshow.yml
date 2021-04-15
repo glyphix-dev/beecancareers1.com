@@ -1,0 +1,56 @@
+---
+label: Main Slideshow
+hide_body: true
+fields:
+- name: showSameText
+  type: boolean
+  label: Show Same Text
+  description: Show a single text block over all slides.
+- name: masterText
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Master Text
+  description: This text will appear above all slides.
+  showOnly:
+    field: showSameText
+    value: true
+- name: slides
+  type: field_group_list
+  fields:
+  - name: title
+    type: text
+    config:
+      required: true
+    label: Title
+    description: Title of the slide
+  - name: image
+    type: file
+    config:
+      maxSize: 10
+    label: Image
+  - name: alternativeText
+    type: text
+    config:
+      required: false
+    label: Alternative Text
+    description: Add alternative text for SEO and WCAG compliance
+  - name: caption
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: true
+      schema:
+        format: markdown
+    label: Caption
+    description: Add a caption to display on this slide.
+  config:
+    min: 
+    max: 
+    labelField: title
+  label: Slides

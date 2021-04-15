@@ -1,0 +1,21 @@
+---
+label: taxonomiesList
+hide_body: true
+fields:
+- name: categories
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+    source:
+      type: simple
+  label: Categories
+- name: practiceAreas
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: Areas
+  description: Add specialties here

@@ -1,0 +1,60 @@
+{{ $imageExt := path.Ext . }}
+{{ $smOptions := dict "image" . }}
+{{ $mdOptions := dict "image" . }}
+{{ $lgOptions := dict "image" . }}
+{{ $xlOptions := dict "image" . }}
+{{ $xxlOptions := dict "image" . }}
+{{ $xxxlOptions := dict "image" . }}
+
+{{ if ne $imageExt ".svg" }}
+  {{ $smOptions = $smOptions | merge (dict "transform" "c_fill,g_face,w_500,h_600,f_auto") }}
+  {{ $mdOptions = $mdOptions | merge (dict "transform" "c_fill,g_face,w_600,h_700,f_auto") }}
+  {{ $lgOptions = $lgOptions | merge (dict "transform" "c_fill,g_face,w_600,h_800,f_auto") }}
+  {{ $xlOptions = $xlOptions | merge (dict "transform"  "c_fill,g_face,w_600,h_800,f_auto") }}
+  {{ $xxlOptions = $xxlOptions | merge (dict "transform" "c_fill,g_face,w_600,h_800,f_auto") }}
+  {{ $xxxlOptions = $xxxlOptions | merge (dict "transform" "c_fill,g_face,w_800,h_690,f_auto") }}
+{{ end }}
+
+{{ $smURL := partial "cloudinary-transform" $smOptions }}
+{{ $smWebp := partial "getWebpUrl" $smURL }}
+
+{{ $mdURL := partial "cloudinary-transform" $mdOptions }}
+{{ $mdWebp := partial "getWebpUrl" $mdURL }}
+
+{{ $lgURL := partial "cloudinary-transform" $lgOptions }}
+{{ $lgWebp := partial "getWebpUrl" $lgURL }}
+
+{{ $xlURL := partial "cloudinary-transform" $xlOptions }}
+{{ $xlWebp := partial "getWebpUrl" $xlURL }}
+
+{{ $xxlURL := partial "cloudinary-transform" $xxlOptions }}
+{{ $xxlWebp := partial "getWebpUrl" $xxlURL }}
+
+{{ $xxxlURL := partial "cloudinary-transform" $xxxlOptions }}
+{{ $xxxlWebp := partial "getWebpUrl" $xxxlURL }}
+
+{{ $src := printf "src='%s'" $smURL | safeHTMLAttr }}
+{{ $srcset := printf "srcset='%s 400w,%s 500w,%s 1200w,%s 1400w,%s 1600w,%s 2000w'" $smURL $mdURL $lgURL $xlURL $xxlURL $xxxlURL | safeHTMLAttr }}
+
+{{ $sizesArray := slice $smURL $mdURL $lgURL $xlURL $xxlURL $xxxlURL }}
+{{ $sizes := "sizes='(max-width:600px) 600w,(max-width:800px) 800w,(max-width:1000px) 1000w, (max-width:1200px) 1200w, (max-widt h:1400px) 1400w,(max-width:2200px) 2200w,(max-width:3000px) 3000w'" | safeHTMLAttr }}
+
+{{ $srcs := slice $smURL $mdURL $lgURL $xlURL $xxlURL $xxxlURL }}
+{{ $srcSm := printf "<source media='(max-width:600px)' sizes='600w'  srcset='%s'>" $smURL }}
+{{ $srcMd := printf "<source media='(max-width:800px)' sizes='800w' srcset='%s' >" $mdURL }}
+{{ $srcLg := printf "<source media='(max-width:1000px)' sizes='1000w' srcset='%s' >" $lgURL }}
+{{ $srcXl := printf "<source media='(max-width:1200px)' sizes='1200w' srcset='%s'>" $xlURL }}
+{{ $srcXxl := printf "<source media='(max-width:1400px)' sizes='1400w' srcset='%s'>" $xxlURL }}
+{{ $srcXxxl := printf "<source media='(max-width:5000px)' sizes='2200w' srcset='%s'>" $xxxlURL }}
+{{ $srcSet := printf "%s %s %s %s %s %s" $srcSm $srcMd $srcLg $srcXl $srcXxl $srcXxxl | safeHTML }}
+
+{{ $lazySrcs := slice $smURL $mdURL $lgURL $xlURL $xxlURL $xxxlURL }}
+{{ $lazySrcSm := printf "<source media='(max-width:600px)' data-sizes='600w'  data-srcset='%s'>" $smURL }}
+{{ $lazySrcMd := printf "<source media='(max-width:800px)' data-sizes='800w' data-srcset='%s' >" $mdURL }}
+{{ $lazySrcLg := printf "<source media='(max-width:1000px)' data-sizes='1000w' data-srcset='%s' >" $lgURL }}
+{{ $lazySrcXl := printf "<source media='(max-width:1200px)' data-sizes='1200w' data-srcset='%s'>" $xlURL }}
+{{ $lazySrcXxl := printf "<source media='(max-width:1400px)' data-sizes='1400w' data-srcset='%s'>" $xxlURL }}
+{{ $lazySrcXxxl := printf "<source media='(max-width:5000px)' data-sizes='2200w' data-srcset='%s'>" $xxxlURL }}
+{{ $lazySrcSet := printf "%s %s %s %s %s %s" $lazySrcSm $lazySrcMd $lazySrcLg $lazySrcXl $lazySrcXxl $lazySrcXxxl | safeHTML }}
+
+{{ return (dict "url" . "src" $src "imgSizes" $srcSet "lazySrcSet" $lazySrcSet "sizes" $sizes) }}

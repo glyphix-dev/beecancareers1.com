@@ -47,7 +47,8 @@
     <link rel="preconnect" href="https://yt3.ggpht.com" crossorigin>
     <link rel="preconnect" href="https://static.doubleclick.net" crossorigin>
     <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     {{ $css := resources.Get "css/styles.min.css" }}
     <link rel="stylesheet" href="{{ $css.Permalink }}">
   </head>
@@ -74,18 +75,6 @@
     </script>
     {{- partial "components/skip-menu" . -}}
     <div id="offcanvas">
-      <a href="#"  class="close">
-        {{ partial "icons/angle-up" . }}
-        <span class="sr-only">Close</span>
-      </a>
-      {{ partial "navigation/mobile-nav" . }}
-      <div class="offmenu">
-        <div class="container">
-          {{ if .Site.Params.enableOffCanvasSearch }}
-            {{ partial "forms/search-form-inline" . }}
-          {{ end }}
-        </div>  
-      </div>
       <div id="canvas" aria-label="Content" tabindex="-1">
         {{- partial "components/message" (dict "id" "no-js-warning" "classes" "global-message bg-danger text-white" "content" "This site is best viewed with javascript turned on.") -}}
         {{- partial "components/message" (dict "id" "msie-warning" "classes" "global-message bg-danger text-white" "content" "This site uses features not supported by Internet Explorer.") -}}
@@ -130,21 +119,8 @@
         {{- partial "layout/footer-simple.html" . -}}
       </div>
     </div>
+    <script src="https://kit.fontawesome.com/77333d58c8.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-    <script>
-      WebFont.load({
-        google: {
-          families: ['Roboto+Slab:wght@500&family','Roboto:ital,wght@0,300;0,500;1,300;1,500']
-        }
-      });
-      /*
-      WebFont.load({
-        google: {
-          families: ['Droid Sans&display=swap']
-        }
-      });
-      */
-    </script>  
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     {{- block "styles" . -}}{{- end -}}
     {{ $appjs := resources.Get "js/app.js" }}

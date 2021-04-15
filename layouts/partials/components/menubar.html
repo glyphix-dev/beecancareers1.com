@@ -1,7 +1,7 @@
 {{ $location := .location }}
 {{ $currentPage := .context.Page }}
 {{ $site := .context.Site }}
-<nav id="{{ .location }}-menubar" aria-label="{{ .location | title }} Navigation" class="menubar focusables">
+<nav id="{{ .location }}-menubar" aria-label="{{ .location | title }} Navigation" class="menubar">
   <ul id="menubar-{{ .location | urlize }}" role="menubar" aria-label="{{ .location | title }} Navigation">
     <!-- Loop throu menu items -->
     {{ range $index, $menuItem := .menu }}

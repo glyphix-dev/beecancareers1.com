@@ -4,7 +4,7 @@
 
 $ms: (
   base: 18px,
-  ratio: 1.1,
+  ratio: 1.2,
   600px: ( 
     base: 18px,
   ), 
@@ -15,13 +15,13 @@ $ms: (
     base: 18px, 
   ), 
   1200px: ( 
-    base: 20px,
+    base: 18px, 
   ), 
   1400px: ( 
-    base: 22px,
+    base: 20px,
   ), 
   2200px: ( 
-    base: 28px,
+    base: 22px, 
   )
 );
 
@@ -54,14 +54,14 @@ $border: 0.25rem solid;
 $border-color: transparent;
 $class-name: "";
 $radius: 0;
-$font-family: 'Poppins', sans-serif;
+$font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 // $transition: all .3s;
 $breakpoint: 60rem;
 $shadow: 0.25rem 0.25rem 0.5rem transparentize($black, .6);
 $hr-color: $gray;
 $line-height: 1.7;
 
-$container-w-xs: 85%;
+$container-w-xs: 95%;
 $container-w-sm: 90%;
 $container-w-md: 90%;
 $container-w-lg: 80%;
@@ -216,18 +216,18 @@ $tooltip-size: .8em;
 // Offcanvas
 $offcanvas-bg: transparent;
 $canvas-bg: transparent;
-$offcanvasMobileHeight: 0;
+$offcanvasMobileHeight: 700px;
 $offcanvasMobilePaddingTop: 0;
-$offcanvasDesktopHeight: 0;
+$offcanvasDesktopHeight: 200px;
 
 // Desktop
 $desktop-bp: lg;
 
 // Header
-$header-bg: transparent;
+$header-bg: $primary;
 $header-color: $white;
-$header-brand-w: 35%;
-$header-brand-w-desktop: 33%;
+$header-brand-w: 15%;
+$header-brand-w-desktop: var(--space-8);
 $header-padding: var(--space) 0;
 
 // Mobile Nav
@@ -310,7 +310,7 @@ $thumb-padding: 65%;
 $thumb-fit: cover;
 
 // Headings
-$h1-font-size: var(--space-9);
+$h1-font-size: var(--space-3);
 $h2-font-size: var(--space-2);
 $h3-font-size: var(--space-1);
 $h4-font-size: var(--space);
@@ -321,8 +321,8 @@ $heading-padding-top: var(--space);
 $heading-padding-bottom: 0;
 $heading-margin-bottom: var(--space);
 $heading-line-height: 1.3;
-$heading-font: 'Poppins', sans-serif;
-$heading-font-weight: 800;
+$heading-font: "Roboto Condensed", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$heading-font-weight: 400;
 $heading-text-transform: none;
 
 $block-padding: var(--space-2) 0;
@@ -332,11 +332,11 @@ $block-text-align: left;
 $share-modal-bg: $white;
 
 //Footer
-$footer-bg: transparent;
+$footer-bg: $primary;
 $footer-color: $white;
-$footer-p: 0 var(--space-more);
+$footer-p: var(--space-more);
 $footer-link: $white;
-$footer-font-size: var(--space);
+$footer-font-size: var(--space--1);
 
 $copyright-font-size: 16px;
 

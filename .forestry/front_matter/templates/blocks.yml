@@ -19,7 +19,8 @@ fields:
     - block-random-posts
     - block-latest-posts
     - block-profile
-    - block-hero
+    - block-profile-carousel
+    - block-martini-service
     config:
       min: 
       max: 

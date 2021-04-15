@@ -1,5 +1,5 @@
 ---
-title: Bugo
+title: Careers at Beecan Health
 baseURL: "/"
 languageCode: en
 summaryLength: 25
@@ -73,7 +73,11 @@ theme:
 - sb
 - sb-api
 menu:
-  main: []
+  main:
+  - identifier: applyNow
+    name: APPLY NOW!
+    url: https://beecanhealth.candidatecare.jobs/job_positions/browse_all
+    weight: -110
   secondary: []
   footer: []
   privacy: []

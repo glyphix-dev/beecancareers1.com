@@ -48,4 +48,13 @@ fields:
       wysiwyg: true
       schema:
         format: markdown
+  - name: highlights
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: true
+      schema:
+        format: markdown
+    label: Highlights
   label: Attorney Fields

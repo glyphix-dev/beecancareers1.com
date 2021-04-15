@@ -12,6 +12,11 @@ fields:
   config: {}
   template: permalinks
   label: URL Mangement
+- name: pageOptions
+  type: include
+  config: {}
+  template: page-options
+  label: Post Options
 - name: layout
   type: text
   config:
@@ -19,8 +24,3 @@ fields:
   label: Layout
   default: post
   hidden: true
-- name: pageOptions
-  type: include
-  config: {}
-  template: page-options
-  label: Post Options

@@ -1,0 +1,14 @@
+{{ $home := "/" | absURL }}
+{{ $site := .Site }}
+<div id="brand-header" class="">
+    <span class="sr-only">Home</span>
+    {{ with .Site.Data.organization.headerLogo }}
+    <div class="" aria-hidden="true">
+      {{ $alt := $site.Title }}
+      {{ $imgSrc := partial "getImgSrc" . }}
+      {{ partial "picture-decorative" (dict "img" . "imgSrc" $imgSrc "alt" $alt) }}  
+    </div>
+    {{ else }}
+      {{ .Site.Title | title }}
+    {{ end }}
+</div>

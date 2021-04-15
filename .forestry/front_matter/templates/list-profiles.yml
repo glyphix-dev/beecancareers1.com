@@ -1,33 +1,38 @@
 ---
-label: Landing Page
-hide_body: true
+label: List Profiles
+hide_body: false
 fields:
 - name: page_meta
   type: include
   config: {}
-  template: page-meta
-  label: Page Meta
+  template: list-meta
+  label: List Page Meta
 - name: hero
   type: include
   config: {}
   template: hero
   label: Hero
-- name: contentBlocks
-  type: include
-  config: {}
-  template: blocks
-  label: Content Blocks
 - name: page_options
   type: include
   config: {}
   template: page-options
   label: Page Options
+- name: url_mangement
+  type: include
+  config: {}
+  template: permalinks
+  label: URL Mangement
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+  hidden: true
+  default: _index
 - name: layout
   type: text
   config:
     required: false
   label: Layout
-  default: landing-page
   hidden: true
-pages:
-- content/_index.md
+  default: list

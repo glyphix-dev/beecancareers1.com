@@ -1,0 +1,48 @@
+---
+label: Block Profile Carousel
+hide_body: false
+display_field: title
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: showTitle
+  type: boolean
+  label: Show Title
+- name: fullWidth
+  type: boolean
+  label: Full Width
+- name: bgColor
+  type: include
+  config: {}
+  template: fields-colors
+  label: Background Color
+- name: textAlign
+  type: include
+  config: {}
+  template: field-text-align
+  label: Text Align
+- name: profilesURL
+  type: text
+  config:
+    required: false
+  label: Profiles URL
+- name: content
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Content
+  description: Add content to the top of the block
+- name: layout
+  type: text
+  config:
+    required: false
+  label: layout
+  default: block-profile-carousel
+  hidden: true
