@@ -44,5 +44,42 @@ contentBlocks:
     textColor: ''
     useBgImage: false
     bgImage: ''
+  - template: block-columns
+    contrast: Lighten
+    classList: columns
+    layout: block-columns
+    title: second row
+    columns:
+    - template: text-column
+      content: "![](https://res.cloudinary.com/beecan-health/image/upload/v1615411796/20.jpg)"
+    - template: text-column
+      content: |-
+        We are looking for compassionate individuals who are eager to provide outstanding care while growing with a group of supportive team members.
+
+        **Sound like you?** [**APPLY NOW**](https://beecanhealth.candidatecare.jobs/job_positions/browse_all)
+    showTitle: false
+    fullWidth: false
+    bgColor: ''
+    textColor: ''
+    useBgImage: false
+    bgImage: ''
+    textAlign: ''
+  - template: block-columns
+    contrast: Lighten
+    classList: columns
+    layout: block-columns
+    title: CAll to action
+    columns:
+    - template: text-column
+      content: ''
+    - template: text-column
+      content: "![](https://res.cloudinary.com/beecan-health/image/upload/v1618521265/Beecan-Nurse_FNL-2_ny6ubs_bqak2j.jpg)"
+    showTitle: false
+    fullWidth: false
+    bgColor: ''
+    textColor: ''
+    useBgImage: false
+    bgImage: ''
+    textAlign: ''
 
 ---
