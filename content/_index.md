@@ -37,7 +37,7 @@ contentBlocks:
 
         **Sound interesting?** [**APPLY NOW**](https://beecanhealth.candidatecare.jobs/job_positions/browse_all)
     - template: text-column
-      content: "![](https://res.cloudinary.com/beecan-health/image/upload/v1618507718/Beecan-Nurse_FNL-2_ny6ubs.jpg)"
+      content: "![](https://res.cloudinary.com/beecan-health/image/upload/v1615405923/Copy-of-1_1.1.1.jpg)"
     showTitle: false
     fullWidth: false
     bgColor: ''
