@@ -9,8 +9,8 @@ images: []
 hero:
   useDefaultImage: false
   heroImage: https://res.cloudinary.com/beecan-health/image/upload/v1615405928/HomeHero1.jpg
-  heroCaption: That’s our CNA Hiring Bonus to all new Beecan CNAs. And that is just
-    the beginning!
+  heroCaption: |-
+    ## That’s our CNA Hiring Bonus to all new Beecan CNAs. And that is just the beginning!
   heroImageAltText: ''
   displayPageTitle: false
   heroCustomText: "# It pays to care... $1,250* to be exact."
@@ -26,7 +26,7 @@ contentBlocks:
   blocks:
   - template: block-columns
     contrast: Lighten
-    textAlign: Left
+    textAlign: Center
     classList: columns
     layout: block-columns
     title: Content
@@ -63,7 +63,7 @@ contentBlocks:
     textColor: ''
     useBgImage: false
     bgImage: ''
-    textAlign: ''
+    textAlign: Center
   - template: block-columns
     contrast: Lighten
     classList: columns
@@ -71,7 +71,11 @@ contentBlocks:
     title: CAll to action
     columns:
     - template: text-column
-      content: ''
+      content: |-
+        <span class="button-link">[Apply Now!](https://beecanhealth.candidatecare.jobs/job_positions/browse_all)</span>
+
+        <small class="legal">*$1,250 hiring bonus is valid only through June 30, 2021. Terms and conditions apply.</small>
+
     - template: text-column
       content: "![](https://res.cloudinary.com/beecan-health/image/upload/v1618521265/Beecan-Nurse_FNL-2_ny6ubs_bqak2j.jpg)"
     showTitle: false
@@ -80,6 +84,6 @@ contentBlocks:
     textColor: ''
     useBgImage: false
     bgImage: ''
-    textAlign: ''
+    textAlign: Center
 
 ---

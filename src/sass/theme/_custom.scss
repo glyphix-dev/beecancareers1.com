@@ -43,20 +43,45 @@ $caseStudyHeight: calc(100vh - #{$canvasPadding});
 }
 
 #hero {
+  position: relative;
+
+  #hero-image {
+    position: relative;
+  }
+
+  #hero-container {
+    position: absolute;
+    bottom: 0;
+  }
+
   h1 {
-    max-width: 80%;
-    max-width: 9ch;
-    font-size: var(--space-6);
+    max-width: 18ch;
+    font-size: var(--space-3);
+    text-shadow: 0 0 0.75rem #000;
 
     @include utility.respond-to(sm){
-      font-size: var(--space-9);
+      font-size: var(--space-5);
     }
 
     @include utility.respond-to(md){
-      font-size: var(--space-7);
+      font-size: var(--space-6);
     }
     @include utility.respond-to(lg){
-      font-size: var(--space-9);
+      font-size: var(--space-8);
+    }
+  }
+
+  h2 {
+    font-size: var(--space-2);
+    @include utility.respond-to(sm){
+      font-size: var(--space-4);
+    }
+
+    @include utility.respond-to(md){
+      font-size: var(--space-4);
+    }
+    @include utility.respond-to(lg){
+      font-size: var(--space-4);
     }
   }
 
@@ -65,7 +90,20 @@ $caseStudyHeight: calc(100vh - #{$canvasPadding});
   }
 }
 
-#block-content {
+.block:not(:last-child) {
+  .flex > * {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    > * {
+      flex: 0 0 100%;
+      padding: 0;
+    }
+  }
+}
+
+.block:last-child {
   .flex > div{
     padding-bottom: var(--space-4);
 

@@ -7,12 +7,12 @@
 {{ $xxxlOptions := dict "image" . }}
 
 {{ if ne $imageExt ".svg" }}
-  {{ $smOptions = $smOptions | merge (dict "transform" "c_fill,g_face,w_500,h_600,f_auto") }}
-  {{ $mdOptions = $mdOptions | merge (dict "transform" "c_fill,g_face,w_600,h_700,f_auto") }}
-  {{ $lgOptions = $lgOptions | merge (dict "transform" "c_fill,g_face,w_600,h_800,f_auto") }}
-  {{ $xlOptions = $xlOptions | merge (dict "transform"  "c_fill,g_face,w_600,h_800,f_auto") }}
-  {{ $xxlOptions = $xxlOptions | merge (dict "transform" "c_fill,g_face,w_600,h_800,f_auto") }}
-  {{ $xxxlOptions = $xxxlOptions | merge (dict "transform" "c_fill,g_face,w_800,h_690,f_auto") }}
+  {{ $smOptions = $smOptions | merge (dict "transform" "c_fill,w_600,h_375,f_auto") }}
+  {{ $mdOptions = $mdOptions | merge (dict "transform" "c_fill,w_800,h_500,f_auto") }}
+  {{ $lgOptions = $lgOptions | merge (dict "transform" "c_fill,w_1200,h_600,f_auto") }}
+  {{ $xlOptions = $xlOptions | merge (dict "transform"  "c_fill,w_1400,h_700,f_auto") }}
+  {{ $xxlOptions = $xxlOptions | merge (dict "transform" "c_fill,w_1600,h_800,f_auto") }}
+  {{ $xxxlOptions = $xxxlOptions | merge (dict "transform" "c_fill,w_2000,h_1000,f_auto") }}
 {{ end }}
 
 {{ $smURL := partial "cloudinary-transform" $smOptions }}

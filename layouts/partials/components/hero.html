@@ -1,5 +1,5 @@
 <div id="hero" class="flex">
-  <div id="hero-image" class="full half-800">
+  <div id="hero-image" class="full">
     {{ with .Params.hero.heroImage }}
       {{ $alt := humanize (index (split (path.Base . ) ".") 0) }}
       {{ $imgSrc := partial "getImgSrcHero" . }}
@@ -11,19 +11,19 @@
         {{ partial "picture" (dict "imgSrc" $imgSrc "alt" $alt) }}
       {{ end }}
     {{ end }}
+    {{ with .Params.hero.heroCustomText }}
+    <div id="hero-container" class="full text-white align-left">
+      <div class="container">
+        {{ . | markdownify }}
+      </div>
+    </div>
+   {{ end }}
   </div>
-  {{ with .Params.hero.heroCustomText }}
-  <div id="hero-container" class="flex full half-800 bg-primary text-secondary align-center justify-center">
-    {{ . | markdownify }}
-  </div>
-  {{ else }}
-  <div id="hero-container" class="full half-800 bg-dark text-light align-center justify-center">
-    <div id="hero-text">
-      <h1>{{ .Title | title }}</h1>
-      {{ with .Description }}
-      <p>{{ . }}</p>
-      {{ end }}
-  </div>
-  </div>
-  {{ end }}
+ {{ with .Params.hero.heroCaption }}
+ <div id="hero-caption" class="full text-dark bg-secondary align-left">
+   <div class="container">
+     {{ . | markdownify }}
+   </div>
+ </div>
+{{ end }}
 </div>
