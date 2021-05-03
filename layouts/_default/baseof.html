@@ -126,5 +126,14 @@
     {{ $appjs := resources.Get "js/app.js" }}
     <script src="{{ $appjs.Permalink }}" type="text/javascript"></script>
     {{- block "script" . -}}{{- end -}}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LFJMC3DT02"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-LFJMC3DT02');
+    </script>
   </body>
 </html>
