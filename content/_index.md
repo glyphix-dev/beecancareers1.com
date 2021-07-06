@@ -74,7 +74,7 @@ contentBlocks:
       content: |-
         <span class="button-link">[Apply Now!](https://beecanhealth.candidatecare.jobs/job_positions/browse_all)</span>
 
-        <small class="legal">*$1,250 hiring bonus is valid only through June 30, 2021. Terms and conditions apply.</small>
+        <small class="legal">*$1,250 hiring bonus is valid only through October 31, 2021. Terms and conditions apply.</small>
 
     - template: text-column
       content: "![](https://res.cloudinary.com/beecan-health/image/upload/v1618521265/Beecan-Nurse_FNL-2_ny6ubs_bqak2j.jpg)"
